@@ -1,8 +1,7 @@
-var gulp = require('gulp');
 var colors = require('chalk');
 var gulpdesc = require('./desc');
 
-module.exports = function help() {
+module.exports = function help(gulp) {
 
     gulpdesc('help', 'List the available tasks');
     var fn = function(done) {
@@ -20,9 +19,6 @@ module.exports = function help() {
             };
 
         var k = Object.keys(gulp.tasks).sort();
-
-        console.log('gulp [task] [task]...');
-        console.log('');
 
         if (k.length > 0) {
             header('Main Tasks');

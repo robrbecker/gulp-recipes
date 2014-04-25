@@ -1,5 +1,5 @@
-module.exports = function(options, recipeFunctions) {
+module.exports = function(gulp, options, recipeFunctions) {
     for (var i = 0; i < recipeFunctions.length; i++) {
-        recipeFunctions[i](options);
+        recipeFunctions[i](gulp, options);
     };
 }

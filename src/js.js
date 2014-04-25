@@ -1,9 +1,8 @@
-var gulp = require('gulp');
 var desc = require('./desc');
 var fs = require('fs');
 
 // TODO just rename this function to change the name of the task
-module.exports = function js(options) {
+module.exports = function js(gulp, options) {
 
     // use the function name as the task name, or you can change it to what you like
     var taskname = arguments.callee.name;

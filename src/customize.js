@@ -1,9 +1,8 @@
-var gulp = require('gulp');
 var desc = require('./desc');
 var fs = require('fs');
 var path = require('path');
 
-module.exports = function customize() {
+module.exports = function customize(gulp, options) {
 
     var taskname = arguments.callee.name;
 

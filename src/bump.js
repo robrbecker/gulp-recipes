@@ -1,8 +1,7 @@
-var gulp = require('gulp');
 var desc = require('./desc');
 var yargs = require('yargs');
 
-module.exports = function bump(options) {
+module.exports = function bump(gulp, options) {
 
     var taskname = arguments.callee.name;
 

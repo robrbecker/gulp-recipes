@@ -1,11 +1,11 @@
 // If you want to create your own build you can copy this file to custom.js
 // modify the settings, or included recipes and update the main gulpfile
 // to run custom instead of standard
-var _ = require('lodash');
 
-module.exports = function(options) {
+module.exports = function(gulp, options) {
+    var _ = require('lodash');
+    var recipe = require('./recipe');
 
-    var recipe = require('./recipe')
     options = _.merge({
         path: {
             src: './src/',
@@ -40,9 +40,10 @@ module.exports = function(options) {
     }, options);
 
     options.glob.src = [options.glob.js, options.glob.ts];
+    options.ts.outDir = options.path.build;
 
     // make a meal from recipes
-    recipe(options, [
+    recipe(gulp, options, [
         require('./help'),
         require('./new'),
         require('./customize'),

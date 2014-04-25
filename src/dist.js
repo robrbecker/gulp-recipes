@@ -1,7 +1,6 @@
-var gulp = require('gulp');
 var desc = require('./desc');
 
-module.exports = function dist(options) {
+module.exports = function dist(gulp, options) {
 
     var taskname = arguments.callee.name;
 
