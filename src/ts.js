@@ -1,10 +1,10 @@
-//var gulp = require('gulp');
+var gulp = require('gulp');
 var desc = require('./desc');
 var ts = require('gulp-tsc');
 var fs = require('fs');
 var changed = require('gulp-changed');
 
-module.exports = function ts(options, gulp) {
+module.exports = function ts(options) {
 
     var taskname = arguments.callee.name;
 
