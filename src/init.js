@@ -3,10 +3,10 @@
 var fs = require('fs-extra');
 var path = require('path');
 
-console.log('Initializing gulp build. CWD: ' + process.cwd());
+function copy(src, target) {
+    console.log('Creating initial ' + target);
+    fs.copySync(src, target);
+}
 
-// fs.createReadStream('node_modules/gulp-recipes/gulpconfig.json')
-//     .pipe(fs.createWriteStream(path.resolve(process.cwd(), 'gulpconfig.json')));
-
-// fs.createReadStream('node_modules/gulp-recipes/sample-gulpfile.js')
-//     .pipe(fs.createWriteStream(path.resolve(process.cwd(), 'gulpfile.js')));
+copy('node_modules/gulp-recipes/gulpconfig.json', path.resolve(process.cwd(), 'gulpconfig.json'));
+copy('node_modules/gulp-recipes/sample-gulpfile.js', path.resolve(process.cwd(), 'gulpfile.js'));
