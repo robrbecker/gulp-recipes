@@ -1,8 +1,8 @@
-var desc = require('./desc');
-var connect = require('gulp-connect');
-var open = require('open');
-
 module.exports = function serve(gulp, options) {
+
+    var desc = require('./desc');
+    var connect = require('gulp-connect');
+    var open = require('open');
 
     var taskname = arguments.callee.name;
 

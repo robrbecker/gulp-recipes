@@ -1,6 +1,7 @@
-var desc = require('./desc');
-
 module.exports = function(gulp, options) {
+
+    var desc = require('./desc');
+
     var taskname = 'default';
     var tasks = '';
     if (!options['default']) {

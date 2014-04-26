@@ -1,6 +1,6 @@
-var desc = require('./desc');
-
 module.exports = function watch(gulp, options) {
+
+    var desc = require('./desc');
 
     var taskname = arguments.callee.name;
 

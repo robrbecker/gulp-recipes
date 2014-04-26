@@ -1,7 +1,7 @@
-var desc = require('./desc');
-var fs = require('fs-extra');
-
 module.exports = function clean(gulp, options) {
+
+    var desc = require('./desc');
+    var fs = require('fs-extra');
 
     var taskname = arguments.callee.name;
 

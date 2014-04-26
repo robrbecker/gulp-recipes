@@ -1,7 +1,7 @@
-var colors = require('chalk');
-var gulpdesc = require('./desc');
-
 module.exports = function help(gulp) {
+
+    var colors = require('chalk');
+    var gulpdesc = require('./desc');
 
     gulpdesc('help', 'List the available tasks');
     var fn = function(done) {

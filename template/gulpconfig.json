@@ -1,0 +1,46 @@
+{
+    "recipes": [
+        "./help",
+        "./new",
+        "./customize",
+        "./clean",
+        "./ts",
+        "./js",
+        "./build",
+        "./default",
+        "./serve",
+        "./dist",
+        "./bump",
+        "./watch"
+    ],
+    "path": {
+        "src": "./src/",
+        "build": "./build/",
+        "build_src": "./build/src/",
+        "dist": "./dist/"
+    },
+    "glob": {
+        "ts": "./src/**/*.ts",
+        "js": "./src/**/*.js"
+    },
+    "build_tasks": ["js", "ts"],
+    "default": ["clean", "build"],
+    "traceur": {
+        "modules": "commonjs",
+        "sourceMap": true,
+        "types": true,
+        "typeAssertions": true,
+        "typeAssertionModule": "assert",
+        "annotations": true
+    },
+    "ts": {
+        "sourceMap": true,
+        "declaration": true,
+        "module": "commonjs",
+        "target": "ES5",
+        "emitError": false,
+        "tmpDir": "/tmp/",
+        "noLib": true
+    },
+    "port": 9000
+}

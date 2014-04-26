@@ -1,17 +1,19 @@
-var desc = require('./desc');
+module.exports = function(options) {
 
-// TODO just rename this function to change the name of the task
-module.exports = function empty(gulp, options) {
+    var gulp = require('gulp');
+    var desc = require('./desc');
 
-    // use the function name as the task name, or you can change it to what you like
-    var taskname = arguments.callee.name;
+
+    var taskname = 'TASKNAME';
 
     desc(taskname, 'Describe your task here');
 
-    // TODO if your task can be run asynchronously, just remove the done param and invocation
+    // TODO if your task can be run completely asynchronously, just remove the done param and invocation
     var fn = function(done) {
         // TODO do work here
         // If you want to error out, call done('error message'); and return
+        // if you kick of an asynchronous task, you can
+        // return a promise or stream to sequence this task correctly
         done();
     }
     gulp.task(taskname, fn);

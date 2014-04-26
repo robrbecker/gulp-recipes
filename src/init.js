@@ -8,5 +8,5 @@ function copy(src, target) {
     fs.copySync(src, target);
 }
 
-copy('node_modules/gulp-recipes/gulpconfig.json', path.resolve(process.cwd(), 'gulpconfig.json'));
-copy('node_modules/gulp-recipes/sample-gulpfile.js', path.resolve(process.cwd(), 'gulpfile.js'));
+copy('node_modules/gulp-recipes/template/gulpconfig.json', path.resolve(process.cwd(), 'gulpconfig.json'));
+copy('node_modules/gulp-recipes/template/gulpfile.js', path.resolve(process.cwd(), 'gulpfile.js'));
