@@ -1,0 +1,15 @@
+{
+    "name": "ts1",
+    "version": "0.0.1",
+    "description": "Sample TypeScript #1",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/robrbecker/ts1.git"
+    },
+    "readmeFilename": "README.md",
+    "devDependencies": {
+        "gulp": "^3.6.1",
+        "gulp-recipes": "git+ssh://git@github.com:robrbecker/gulp-recipes.git#master"
+    }
+}

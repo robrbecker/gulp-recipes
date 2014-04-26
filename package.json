@@ -8,7 +8,9 @@
         "url": "git://github.com/robrbecker/gulp-recipes.git"
     },
     "readmeFilename": "README.md",
-    "main": "src/recipe",
+    "bin": {
+        "gulp-init": "./src/init.js"
+    },
     "devDependencies": {
         "chalk": "^0.4.0",
         "fs-extra": "^0.8.1",
@@ -21,7 +23,6 @@
         "gulp-if": "^1.0.0",
         "gulp-install": "^0.1.4",
         "gulp-open": "^0.2.8",
-        "gulp-traceur": "^0.4.0",
         "gulp-tsc": "^0.7.0",
         "lodash": "^2.4.1",
         "open": "0.0.5",
