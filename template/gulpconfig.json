@@ -14,17 +14,19 @@
         "./watch",
         "./jshint",
         "./tslint",
-        "./lint"
+        "./lint",
+        "./analyze"
     ],
     "path": {
         "src": "./src/",
         "build": "./build/",
         "build_src": "./build/src/",
-        "dist": "./dist/"
+        "dist": "./dist/",
+        "report": "./report/"
     },
     "glob": {
-        "ts": "./src/**/*.ts",
-        "js": "./src/**/*.js"
+        "ts": "**/*.ts",
+        "js": "**/*.js"
     },
     "build_tasks": ["js", "ts"],
     "default": ["clean", "build"],

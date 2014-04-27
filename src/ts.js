@@ -15,7 +15,9 @@ module.exports = function(gulp, options) {
         if (!fs.existsSync(options.path.build)) fs.mkdirSync(options.path.build, '0777');
         if (!fs.existsSync(options.path.build_src)) fs.mkdirSync(options.path.build_src, '0777');
 
-        return gulp.src(options.glob.ts)
+        return gulp.src(options.glob.ts, {
+            cwd: options.path.src
+        })
             .pipe(changed(options.path.build_src))
             .pipe(ts(options.ts))
             .pipe(gulp.dest(options.path.build_src));

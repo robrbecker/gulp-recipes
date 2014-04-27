@@ -8,10 +8,11 @@ module.exports = function(gulp, options) {
     desc(taskname, 'Validate TS files with tslint');
 
     var fn = function(done) {
-        return gulp.src(options.glob.ts)
+        return gulp.src(options.glob.ts, {
+            cwd: options.path.src
+        })
             .pipe(tslint())
             .pipe(tslint.report('verbose'));
-        // done();
     };
     gulp.task(taskname, fn);
 };

@@ -9,6 +9,7 @@ module.exports = function(gulp, options) {
 
     var fn = function(done) {
         fs.removeSync(options.path.build);
+        fs.removeSync(options.path.report);
         done();
     };
     gulp.task(taskname, fn);
