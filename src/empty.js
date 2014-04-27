@@ -1,8 +1,6 @@
-module.exports = function(options) {
+module.exports = function(gulp, options) {
 
-    var gulp = require('gulp');
     var desc = require('./desc');
-
 
     var taskname = 'TASKNAME';
 
@@ -15,6 +13,6 @@ module.exports = function(options) {
         // if you kick of an asynchronous task, you can
         // return a promise or stream to sequence this task correctly
         done();
-    }
+    };
     gulp.task(taskname, fn);
-}
+};

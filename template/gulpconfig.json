@@ -11,7 +11,10 @@
         "./serve",
         "./dist",
         "./bump",
-        "./watch"
+        "./watch",
+        "./jshint",
+        "./tslint",
+        "./lint"
     ],
     "path": {
         "src": "./src/",

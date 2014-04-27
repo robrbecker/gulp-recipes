@@ -1,9 +1,9 @@
-module.exports = function bump(gulp, options) {
+module.exports = function(gulp, options) {
 
     var desc = require('./desc');
     var yargs = require('yargs');
 
-    var taskname = arguments.callee.name;
+    var taskname = 'bump';
 
     desc(taskname, 'Bump a version number in a JSON config file. Args: --type=patch|minor|major');
 
@@ -13,6 +13,6 @@ module.exports = function bump(gulp, options) {
                 type: yargs.argv.type || 'patch'
             }))
             .pipe(gulp.dest('./'));
-    }
+    };
     gulp.task(taskname, fn);
-}
+};

@@ -1,9 +1,9 @@
-module.exports = function js(gulp, options) {
+module.exports = function(gulp, options) {
     var desc = require('./desc');
     var fs = require('fs');
 
     // use the function name as the task name, or you can change it to what you like
-    var taskname = arguments.callee.name;
+    var taskname = 'js';
 
     desc(taskname, 'Copy JS files to ' + options.path.build_src);
 
@@ -16,6 +16,6 @@ module.exports = function js(gulp, options) {
         gulp.src(options.glob.js)
             .pipe(gulp.dest(options.path.build_src));
         done();
-    }
-    gulp.task(taskname, fn);
-}
+    };
+    gulp.task(taskname, ['jshint'], fn);
+};

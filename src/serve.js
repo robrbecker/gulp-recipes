@@ -1,10 +1,10 @@
-module.exports = function serve(gulp, options) {
+module.exports = function(gulp, options) {
 
     var desc = require('./desc');
     var connect = require('gulp-connect');
     var open = require('open');
 
-    var taskname = arguments.callee.name;
+    var taskname = 'serve';
 
     desc(taskname, 'Open the project website');
 
@@ -18,6 +18,6 @@ module.exports = function serve(gulp, options) {
         open('http://localhost:' + options.port + '/');
 
         done();
-    }
+    };
     gulp.task(taskname, fn);
-}
+};

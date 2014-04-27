@@ -1,7 +1,8 @@
-var desc = require('./desc');
+module.exports = function(gulp, options) {
 
-module.exports = function build(gulp, options) {
-    var taskname = arguments.callee.name;
+    var desc = require('./desc');
+
+    var taskname = 'build';
     desc(taskname, 'Build');
     gulp.task(taskname, options.build_tasks);
-}
+};

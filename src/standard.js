@@ -6,7 +6,6 @@ module.exports = function(gulp) {
     var _ = require('lodash');
     var fs = require('fs');
     var path = require('path');
-    ///var process = require('process');
 
     var options = null;
     var local = path.resolve(process.cwd(), 'gulpconfig.json');
@@ -25,6 +24,6 @@ module.exports = function(gulp) {
     // make a meal from recipes
     for (var i = 0; i < options.recipes.length; i++) {
         require(options.recipes[i])(gulp, options);
-    };
+    }
 
-}
+};

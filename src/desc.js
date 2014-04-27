@@ -6,5 +6,5 @@ var fn = function desc(taskname, description) {
     if (arguments.length == 2) {
         taskDescriptions[taskname] = description;
     }
-}
+};
 module.exports = fn;

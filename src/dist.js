@@ -1,8 +1,8 @@
-module.exports = function dist(gulp, options) {
+module.exports = function(gulp, options) {
 
     var desc = require('./desc');
 
-    var taskname = arguments.callee.name;
+    var taskname = 'dist';
 
     desc(taskname, 'Create a distribution');
 
@@ -12,6 +12,6 @@ module.exports = function dist(gulp, options) {
         })
             .pipe(gulp.dest(options.path.dist));
         done();
-    }
+    };
     gulp.task(taskname, ['clean', 'build'], fn);
-}
+};

@@ -13,4 +13,4 @@ module.exports = function(gulp, options) {
     tasks = options['default'].join(',');
     desc(taskname, tasks);
     gulp.task(taskname, options['default']);
-}
+};

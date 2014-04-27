@@ -1,16 +1,16 @@
-module.exports = function help(gulp) {
+module.exports = function(gulp) {
 
     var colors = require('chalk');
-    var gulpdesc = require('./desc');
+    var desc = require('./desc');
 
-    gulpdesc('help', 'List the available tasks');
+    desc('help', 'List the available tasks');
     var fn = function(done) {
 
         var filter = function(inc) {
             return function(n) {
                 var hasDash = n.search(/[-_:]/) !== -1;
                 return inc && hasDash || !inc && !hasDash;
-            }
+            };
         },
             header = function(text) {
                 console.log('');
@@ -24,7 +24,7 @@ module.exports = function help(gulp) {
             header('Main Tasks');
 
             k.filter(filter(false)).forEach(function(name) {
-                var desc = gulpdesc(name);
+                var desc = desc(name);
                 if (desc) desc = ' - ' + desc;
                 console.log('    ' + colors.cyan(name) + desc);
             });
@@ -32,7 +32,7 @@ module.exports = function help(gulp) {
             header('Sub Tasks');
 
             k.filter(filter(true)).forEach(function(name) {
-                var desc = gulpdesc(name);
+                var desc = desc(name);
                 if (desc) desc = ' - ' + desc;
                 console.log('    ' + name + desc);
             });
@@ -42,6 +42,6 @@ module.exports = function help(gulp) {
         }
         console.log('');
         done();
-    }
+    };
     gulp.task('help', fn);
-}
+};

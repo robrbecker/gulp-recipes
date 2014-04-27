@@ -1,10 +1,11 @@
-module.exports = function ts(gulp, options) {
+module.exports = function(gulp, options) {
+
     var desc = require('./desc');
     var fs = require('fs');
     var changed = require('gulp-changed');
     var ts = require('gulp-tsc');
 
-    var taskname = arguments.callee.name;
+    var taskname = 'ts';
 
     desc(taskname, 'Compile TypeScript');
 
@@ -18,6 +19,6 @@ module.exports = function ts(gulp, options) {
             .pipe(changed(options.path.build_src))
             .pipe(ts(options.ts))
             .pipe(gulp.dest(options.path.build_src));
-    }
-    gulp.task(taskname, fn);
-}
+    };
+    gulp.task(taskname, ['tslint'], fn);
+};

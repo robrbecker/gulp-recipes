@@ -1,6 +1,5 @@
-module.exports = function new_recipe() {
+module.exports = function(gulp) {
 
-    var gulp = require('gulp');
     var desc = require('./desc');
     var fs = require('fs');
     var argv = require('yargs').argv;
@@ -34,6 +33,6 @@ module.exports = function new_recipe() {
             .pipe(repl('TASKNAME', argv.recipe))
             .pipe(rename(newname))
             .pipe(gulp.dest(targetDir));
-    }
+    };
     gulp.task(taskname, fn);
-}
+};
