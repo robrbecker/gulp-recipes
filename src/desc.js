@@ -1,5 +1,5 @@
 var taskDescriptions = {};
-var fn = function desc(taskname, description) {
+module.exports = function desc(taskname, description) {
     if (arguments.length == 1) {
         return taskDescriptions[taskname] || '';
     }
@@ -7,4 +7,3 @@ var fn = function desc(taskname, description) {
         taskDescriptions[taskname] = description;
     }
 };
-module.exports = fn;

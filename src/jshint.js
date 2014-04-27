@@ -7,13 +7,14 @@ module.exports = function(gulp, options) {
 
     desc(taskname, 'Validate JS files with jshint');
 
-    var fn = function(done) {
+    var fn = function() {
         return gulp.src(options.glob.js, {
             cwd: options.path.src
         })
             .pipe(jshint())
             .pipe(jshint.reporter('jshint-stylish'))
             .pipe(jshint.reporter('fail'));
+        // done();
     };
     gulp.task(taskname, fn);
 };

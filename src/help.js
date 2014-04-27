@@ -24,17 +24,17 @@ module.exports = function(gulp) {
             header('Main Tasks');
 
             k.filter(filter(false)).forEach(function(name) {
-                var desc = desc(name);
-                if (desc) desc = ' - ' + desc;
-                console.log('    ' + colors.cyan(name) + desc);
+                var d = desc(name);
+                if (d) d = ' - ' + d;
+                console.log('    ' + colors.cyan(name) + d);
             });
 
             header('Sub Tasks');
 
             k.filter(filter(true)).forEach(function(name) {
-                var desc = desc(name);
-                if (desc) desc = ' - ' + desc;
-                console.log('    ' + name + desc);
+                var d = desc(name);
+                if (d) d = ' - ' + d;
+                console.log('    ' + name + d);
             });
         }
         else {

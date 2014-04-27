@@ -6,12 +6,11 @@ module.exports = function(gulp, options) {
 
     desc(taskname, 'Create a distribution');
 
-    var fn = function(done) {
-        gulp.src('**/*.*', {
-            base: options.path.build
+    var fn = function() {
+        return gulp.src('**/*.*', {
+            cwd: options.path.build
         })
             .pipe(gulp.dest(options.path.dist));
-        done();
     };
     gulp.task(taskname, ['clean', 'build'], fn);
 };

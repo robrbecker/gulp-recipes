@@ -15,14 +15,18 @@
         "./jshint",
         "./tslint",
         "./lint",
-        "./analyze"
+        "./analyze",
+        "./analyze_generate",
+        "./jsdoc",
+        "./jsdoc_generate"
     ],
     "path": {
         "src": "./src/",
         "build": "./build/",
         "build_src": "./build/src/",
         "dist": "./dist/",
-        "report": "./report/"
+        "report": "./build/coverage/",
+        "docs": "./build/docs/"
     },
     "glob": {
         "ts": "**/*.ts",

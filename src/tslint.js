@@ -7,7 +7,7 @@ module.exports = function(gulp, options) {
 
     desc(taskname, 'Validate TS files with tslint');
 
-    var fn = function(done) {
+    var fn = function() {
         return gulp.src(options.glob.ts, {
             cwd: options.path.src
         })
